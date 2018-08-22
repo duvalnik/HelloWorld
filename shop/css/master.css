@@ -6,3 +6,12 @@ html {
 *:after {
   box-sizing: inherit;
 }
+.l-wrap {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.three-col-grid .grid-item {
+  width: 380px;
+  float: left;
+}
