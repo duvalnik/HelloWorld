@@ -20,12 +20,7 @@ h1#logo a{ display:block; height:64px; text-indent: -200px; background:url(../im
 #cart { float:right; width:160px; top:0; right:0; height:44px; background:#8b0000; color:#fff; padding:20px 10px 0 10px; white-space:nowrap; line-height:20px;}
 a.cart-link { color:#fff; background:url(../images/cart-link.gif) no-repeat 0 0; padding:0 0 0 32px; text-decoration: none;}
 a.cart-link:hover { text-decoration: underline;}
-#nav { float:right; white-space:nowrap; }
-#nav ul{ list-style-type: none; height:64px; font-weight: bold; float:left;}
-#nav ul li{ float:left; display:inline; }
-#nav ul li a{ float:left; height:34px; line-height:34px; text-decoration: none; color:#fff; padding:0 15px;}
-#nav ul li a.active,
-#nav ul li a:hover{ background:#fff; color:#8b0000; }
+
 .cl { font-size:0; line-height:0; clear:both; display:block; height:0; }
 
 
@@ -36,8 +31,120 @@ a img { border:0; }
 a { color:#8b0000; text-decoration: underline; cursor:pointer; }
 a:hover { color:#666; text-decoration: none; }
 
-.left, .alignleft { float:left; display:inline; }
-.right, .alignright { float:right; display:inline; }
-input, textarea, select { font-family: "Trebuchet MS", Arial, sans-serif; font-size:12px; }
+.menu{
+  width: 70%;
+  position:absolute;
+  top: 20px;
+  left: 180px;
+  z-index: 100;
+}
+.nav {
+  position: relative;
+	min-height: 40px;
+  z-index: 10;
+}
+.nav ul {
+	margin: 0;
+	padding: 0;
+  font-weight: bold;
+}
+.nav li {
+	margin: 0 5px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	*display:inline; /* ie7 */
+}
+.nav a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #F08080;
+	line-height: 100%;
+}
+.nav a:hover {
+	color: #000;
+}
+.nav .current a {
+	background: #FFA07A;
+	color: #8B0000;
+	border-radius: 3px;
+}
+.nav.center ul {
+	text-align: center;
+}
 
-.ddd{border-left: 1px solid #000;}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+@media only screen and (max-width:750px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+.nav {
+		position: relative;
+		min-height: 20px;
+z-index: 10;
+	}
+	.nav ul {
+		width: 120px;
+		padding: 5px 0;
+		position: absolute;
+    font-weight: bold;
+		top: 0;
+		left: 0;
+		border: solid 1px #aaa;
+		background: #FFFACD url(../images/icon-menu.png) no-repeat 10px 11px;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+
+	}
+	.nav li {
+		display:none; /* Скрыть все <li> пункты */
+		margin: 0;
+	}
+
+	.nav .current {
+		display: block; /* Показывать только текущие пункты */
+	}
+	.nav a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+	}
+	.nav .current a {
+		background: none;
+		color: #666;
+	}
+
+	/* При наведении на пункты меню */
+	.nav ul:hover {
+		background-image: none;
+	}
+	.nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav ul:hover .current {
+		background: url(../images/icon-check.png) no-repeat 10px 7px;
+	}
+
+	/* Адаптивное меню с лева */
+	.nav.left ul {
+		right: auto;
+		 left: 0;
+	}
+
+	/* адаптивное меню по центру  */
+	.nav.center ul {
+		left: 50%;
+		margin-left: -90px;
+	}
+
+}
