@@ -73,8 +73,8 @@ a:hover { color:#666; text-decoration: none; }
 	text-align: center;
 }
 #main { padding:10px 0 0 0; }
-#sidebar { float:left; width:226px;}
-#content { float:right; width:700px;}
+#sidebar { float:left; width: 30%;}
+#content { float:right; max-width:700px;width: 70%;}
 #slider { height:252px; position:relative; overflow:hidden; }
 #slider-holder { width:720px; height:252px; position:relative; overflow:hidden; }
 #slider-holder .jcarousel-clip{ width:720px; height:252px; position:relative; overflow:hidden; }
@@ -106,9 +106,9 @@ a:hover { color:#666; text-decoration: none; }
 .search .field { display:block; margin-bottom:10px; }
 .search .inline-field label { display:inline; padding:0; }
 .search .inline-field .field { display:inline; margin:0; }
-.search input.field { width:206px; }
-.search select.field { width:212px; }
-.search select.small-field { width:50px; }
+.search input.field { width:100% }
+.search select.field { width:100%; }
+.search select.small-field { width:30%; }
 
 .search-submit { width:70px; background:#8b0000; border:0; color:#fff; height:27px; display:block; line-height:26px; cursor:pointer; margin:12px 0 10px 0;}
 
@@ -192,5 +192,25 @@ z-index: 10;
 		left: 50%;
 		margin-left: -90px;
 	}
-
+#sidebar{
+  width: 100%;
+}
+.search{
+  width: 100%;
+}
+.box-content{
+  width: 100%;
+}
+#slider{
+  display: none;
+}
+.products{
+  width: 100%;
+}
+.product-info{
+  width: 100%;
+}
+#content{
+  float:left;
+}
 }
